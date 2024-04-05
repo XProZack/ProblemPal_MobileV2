@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProblemPal_MobileV2.Views.ConcernsWindow"
+             Shell.BackgroundColor="#41C0FF">
+
+    <Shell.TitleView>
+        <HorizontalStackLayout VerticalOptions="Fill" HorizontalOptions="CenterAndExpand">
+            <Image Source="problempal.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Image>
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Command="{Binding Placeholder}">
+            <ToolbarItem.IconImageSource>
+                <FileImageSource File="info.png"/>
+
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="100"
+        BackgroundColor="#3B98CC"
+        >
+
+
+            <Label
+Text="what's on your mind?"
+Style="{StaticResource Headline}"
+TextColor="white"
+TextTransform="Uppercase"
+ FontSize="24"
+SemanticProperties.HeadingLevel="Level1"
+VerticalOptions="StartAndExpand"
+Margin="0,50,0,0" />
+
+
+
+
+            <Frame BackgroundColor="#227EAB"
+       CornerRadius="15"
+       Padding="10"
+       HeightRequest="400">
+                <VerticalStackLayout>
+                    <Label Text="What type of concern do you have?"
+               TextColor="white"
+               VerticalOptions="StartAndExpand"
+               HorizontalOptions="StartAndExpand"
+                           Margin="5"
+                           />
+
+                    <StackLayout Orientation="Vertical"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+
+                        <Button Text="Academic"
+                    BackgroundColor="#41C0FF"
+                                Margin="10"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"/>
+                        
+                        <Button Text="Class"
+                    BackgroundColor="#41C0FF"
+                                Margin="10"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"/>
+                        
+                        <Button Text="Teacher"
+                    BackgroundColor="#41C0FF"
+                                Margin="10"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"/>
+
+                        <BoxView BackgroundColor="White"
+                 HeightRequest="1"
+                 WidthRequest="500"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="End"
+                                 Margin="10"/>
+
+
+                        <Button Text="Exit"
+                BackgroundColor="#41C0FF"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End"
+                Margin="5"/>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

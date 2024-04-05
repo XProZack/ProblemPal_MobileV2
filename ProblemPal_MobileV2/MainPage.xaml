@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProblemPal_MobileV2.MainPage"
+             Shell.BackgroundColor="#41C0FF">
+
+    <Shell.TitleView>
+        <HorizontalStackLayout VerticalOptions="Fill" HorizontalOptions="CenterAndExpand">
+            <Image Source="problempal.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Image>
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+
+    
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Command="{Binding Placeholder}">
+            <ToolbarItem.IconImageSource>
+               <FileImageSource File="info.png"/>
+                
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            BackgroundColor="#227EAB"
+            >
+
+
+            <Label
+    Text="what's on your mind?"
+    Style="{StaticResource Headline}"
+    TextColor="white"
+    TextTransform="Uppercase"
+     FontSize="24"
+    SemanticProperties.HeadingLevel="Level1"
+    VerticalOptions="StartAndExpand"
+    Margin="0,50,0,0" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Column for the left button -->
+                    <ColumnDefinition Width="*" />
+                    <!-- Column for the right button -->
+                </Grid.ColumnDefinitions>
+
+                <!-- ImageButton positioned on the far left -->
+                <ImageButton 
+        Grid.Column="0"
+        Source="plus.png"
+        BackgroundColor="White"
+        HeightRequest="50"
+        WidthRequest="50"
+        CornerRadius="25"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        Margin="10"/>
+
+                <!-- ImageButton positioned on the far right -->
+                <ImageButton 
+        Grid.Column="1"
+        Source="send.png"
+        BackgroundColor="White"
+        HeightRequest="50"
+        WidthRequest="50"
+        CornerRadius="25"
+        HorizontalOptions="End"
+        VerticalOptions="End"
+        Margin="10" />
+            </Grid>
+
+
+            <Frame BackgroundColor="#ffffff"
+       CornerRadius="15"
+       Padding="10"
+       HeightRequest="400"
+       >
+                <Entry Placeholder="Type here..."
+           TextColor="Black"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="StartAndExpand"/>
+            </Frame>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

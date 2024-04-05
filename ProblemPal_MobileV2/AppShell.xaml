@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ProblemPal_MobileV2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProblemPal_MobileV2"
+    Shell.FlyoutBehavior="Flyout"
+    Title="ProblemPal_MobileV2">
+
+    <ShellContent
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage"
+        />
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+        <Image Source="person.png" HeightRequest="140"></Image>
+            <Label Text="User" HorizontalTextAlignment="Center" TextColor="#227EAB" FontSize="25"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+    
+    <Shell.FlyoutFooter>
+        <StackLayout>
+            <Button Text="Sign Out" Command="{Binding SignOutCommand}" BackgroundColor="#41C0FF" WidthRequest="100" CornerRadius="120"/>
+        </StackLayout>
+    </Shell.FlyoutFooter>
+    
+</Shell>
