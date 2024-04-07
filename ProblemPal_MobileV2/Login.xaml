@@ -21,27 +21,63 @@
             <Label
                 Text="PROBLEMPAL"
                 TextColor="White"
+                FontAttributes="Bold"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
             <!-- This is for the Student ID -->
             <Frame BackgroundColor="#41C0FF" BorderColor="White" Padding="0" CornerRadius="30" HorizontalOptions="FillAndExpand">
 
-                <Entry Placeholder="Enter Student ID"
-        BackgroundColor="Transparent" 
-        TextColor="White" 
-        VerticalOptions="Center"
-        HorizontalOptions="FillAndExpand"/>
+             <Entry x:Name="StudentIDEntry"
+            Placeholder="Student ID"
+            BackgroundColor="Transparent" 
+            TextColor="White" 
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
+
+            </Frame>
+
+            <Frame BackgroundColor="#41C0FF" BorderColor="White" Padding="0" CornerRadius="30" HorizontalOptions="FillAndExpand">
+
+             <Entry x:Name="EmailEntry"
+            Placeholder="E-mail"
+            BackgroundColor="Transparent" 
+            TextColor="White" 
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
+
+            </Frame>
+
+            <Frame BackgroundColor="#41C0FF" BorderColor="White" Padding="0" CornerRadius="30" HorizontalOptions="FillAndExpand">
+
+             <Entry x:Name="PasswordEntry"
+            Placeholder="Password"
+            BackgroundColor="Transparent" 
+            TextColor="White" 
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
 
             </Frame>
 
             <!-- Button For LOGIN -->
             <Button
-                x:Name="LoginBtn"
-                Text="LOGIN" 
-                BackgroundColor="#41C0FF"
-                SemanticProperties.Hint="Nothing yet."
-                HorizontalOptions="CenterAndExpand" />
+            x:Name="LoginBtn"
+            Text="LOGIN" 
+            TextColor="White"
+            FontAttributes="Bold"
+            BackgroundColor="#41C0FF"
+            Clicked="LoginBtn_Clicked"
+            HorizontalOptions="CenterAndExpand" />
+
+            <Button
+            x:Name="AaccBtn"
+            Text="Activate Account" 
+            TextColor="White"
+            BackgroundColor="Transparent"
+            Clicked="AaccBtn_Clicked" 
+            HorizontalOptions="CenterAndExpand" />
+
+
 
 
         </VerticalStackLayout>

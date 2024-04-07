@@ -30,14 +30,14 @@
 
 
             <Label
-    Text="what's on your mind?"
-    Style="{StaticResource Headline}"
-    TextColor="white"
-    TextTransform="Uppercase"
-     FontSize="24"
-    SemanticProperties.HeadingLevel="Level1"
-    VerticalOptions="StartAndExpand"
-    Margin="0,50,0,0" />
+        Text="what's on your mind?"
+        Style="{StaticResource Headline}"
+        TextColor="white"
+        TextTransform="Uppercase"
+         FontSize="24"
+        SemanticProperties.HeadingLevel="Level1"
+        VerticalOptions="StartAndExpand"
+        Margin="0,50,0,0" />
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -48,45 +48,50 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- ImageButton positioned on the far left -->
-                <ImageButton 
-        Grid.Column="0"
-        Source="plus.png"
-        BackgroundColor="White"
-        HeightRequest="50"
-        WidthRequest="50"
-        CornerRadius="25"
-        HorizontalOptions="Start"
-        VerticalOptions="Start"
-        Margin="10"/>
+                    <ImageButton 
+            Grid.Column="0"
+            Source="plus.png"
+            BackgroundColor="White"
+            HeightRequest="50"
+            WidthRequest="50"
+            CornerRadius="25"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Margin="10"
+		  />
 
                 <!-- ImageButton positioned on the far right -->
-                <ImageButton 
-        Grid.Column="1"
-        Source="send.png"
-        BackgroundColor="White"
-        HeightRequest="50"
-        WidthRequest="50"
-        CornerRadius="25"
-        HorizontalOptions="End"
-        VerticalOptions="End"
-        Margin="10" />
-            </Grid>
+                    <ImageButton 
+            Grid.Column="1"
+            Source="send.png"
+            BackgroundColor="White"
+            HeightRequest="50"
+            WidthRequest="50"
+            CornerRadius="25"
+            HorizontalOptions="End"
+            VerticalOptions="End"
+            Margin="10"
+		    Clicked="SendButton_Clicked"/>
+                </Grid>
 
 
             <Frame BackgroundColor="#ffffff"
-       CornerRadius="15"
-       Padding="10"
-       HeightRequest="400"
-       >
+           CornerRadius="15"
+           Padding="10"
+           HeightRequest="400"
+           >
                 <Entry Placeholder="Type here..."
+		    x:Name="ComplaintEntry"
            TextColor="Black"
            HorizontalOptions="FillAndExpand"
            VerticalOptions="StartAndExpand"/>
             </Frame>
 
 
-
         </VerticalStackLayout>
+        
+
     </ScrollView>
+
 
 </ContentPage>

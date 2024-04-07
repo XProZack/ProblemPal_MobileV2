@@ -2,10 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProblemPal_MobileV2.AdminWindow"
-             Title="AdminWindow">
+             Title="AdminWindow"
+              Shell.BackgroundColor="#41C0FF">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="COMPLAINTS"
+            TextColor="White"
+            FontAttributes="Bold"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
